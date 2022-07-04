@@ -17,22 +17,12 @@ function playRound(playerSelection, computerSelection){
     || (mySelection == "scissor" && computerSelection == "scissor")){
         return "T"
     }
-    else if (mySelection == "rock" && computerSelection == "paper"){
+    else if ((mySelection == "rock" && computerSelection == "paper") || (mySelection == "scissor" && computerSelection == "rock") || 
+    ((mySelection == "paper" && computerSelection == "scissor"))){
         return "L"
     }
-    else if (mySelection == "rock" && computerSelection == "scissor"){
-        return "W"
-    }
-    else if (mySelection == "paper" && computerSelection == "scissor"){
-        return "L"
-    }
-    else if (mySelection == "paper" && computerSelection == "rock"){
-        return "W"
-    }
-    else if (mySelection == "scissor" && computerSelection == "rock"){
-        return "L"
-    }
-    else if (mySelection == "scissor" && computerSelection == "paper"){
+    else if ((mySelection == "rock" && computerSelection == "scissor") || (mySelection == "paper" && computerSelection == "rock") || 
+    (mySelection == "scissor" && computerSelection == "paper")){
         return "W"
     }
 }
