@@ -12,21 +12,21 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 0px;
 }
 
 #title{
     margin: 0px;
+    margin-bottom: 50px;
     padding: 50px;
     color: white;
     background-color: skyblue;
-    width: 100%;
+    width: 1820px;
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    position: fixed;
-    left: 0;
-    top: 0;
 }
+
 
 .footer{
     position: fixed;
@@ -47,7 +47,6 @@ body{
     padding: 50px;
     margin-left: 100px;
     margin-right: 100px;
-    margin-top: 100px;
     gap: 20px;
 
 }
