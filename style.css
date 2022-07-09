@@ -1,0 +1,79 @@
+body{
+    font-family: 'Press Start 2P', cursive;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: auto;
+    background-color: lightblue;
+}
+
+.game{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#title{
+    margin: 0px;
+    margin-bottom: 50px;
+    padding: 50px;
+    color: white;
+    background-color: skyblue;
+    width: 1820px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    background-color: skyblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    gap: 75px;
+
+}
+
+.rock, .paper, .scissor{
+    font-family: 'Press Start 2P', cursive;
+    padding: 10px;
+    margin: 50px;
+    border: 0ch;
+    background-color: lightblue;
+}
+
+.nameRock, .namePaper, .nameScissor{
+    padding-top: 10px;
+}
+
+.scoreboard{
+    display: flex;
+    gap: 150px;
+}
+
+.mySelection, .compSelection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 10px;
+}
+
+.myScore, .compScore{
+    margin: 30px;
+    
+}

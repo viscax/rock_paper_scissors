@@ -3,24 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <title>Rock Paper Scissors!</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
   <h1 id="title">Rock, Paper, Scissors... Shoot!</h1>
-  <div class="res"></div>
-  <div class="buttons">
-    <button class="rock">Rock</button>
-    <button class="paper">Paper</button>
-    <button class="scissor">Scissor</button>
+  <div class="game">
+    <div class="res">Click one of the buttons to PLAY!</div>
+    <div class="buttons">
+      <button class="rock"><input type="image" src="./rock.webp" name="saveForm" class="btTxt submit" id="saveForm" width="100px" height="120px"/> <div class="nameRock">Rock</div></button>
+      <button class="paper"><input type="image" src="./paper.png" name="saveForm" class="btTxt submit" id="saveForm" width="100px" height="120px"/><div class="namePaper">Paper</div></button>
+      <button class="scissor"><input type="image" src="./scissors.jpeg" name="saveForm" class="btTxt submit" id="saveForm" width="100px" height="120px"/><div class="nameScissor">Scissor</div></button>
+    </div>
+    <div class="scoreboard">
+      <div class="mySelection">
+        <div class="myPrompt">Player:</div>
+        <div class="myScore">0</div>
+      </div>
+      <div class="compSelection">
+        <div class="compPrompt">Computer:</div>
+        <div class="compScore">0</div>
+      </div>
+    </div>
   </div>
-  <div class="mySelection">
-    <div class="myPrompt">Player:</div>
-    <div class="myScore">0</div>
-  </div>
-  <div class="compSelection">
-    <div class="compPrompt">Computer:</div>
-    <div class="compScore">0</div>
-  </div>
-  <div class="footer"></div>
+
+  <div class="footer">a Viscax game. 2022</div>
 
 
   <script src="script.js"></script>

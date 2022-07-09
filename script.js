@@ -2,16 +2,16 @@
 7/9/22
 For now, design the web-page using CSS.
 */
-
 let myScore = 0;
 let compScore = 0;
+
 function randomInt(max){
-    return Math.floor(Math.random()*max)
+    return Math.floor(Math.random()*max);
 }
 
 function computerPlay(){
-    const array = ["rock", "paper", "scissor"]
-    return array[randomInt(3)]
+    const array = ["rock", "paper", "scissor"];
+    return array[randomInt(3)];
 }
 
 function capitalizeFirstLetter(string) {
@@ -19,7 +19,7 @@ function capitalizeFirstLetter(string) {
 }
 
 function playRound(playerSelection, computerSelection){
-    mySelection = playerSelection.toLowerCase()
+    mySelection = playerSelection.toLowerCase();
     if ((mySelection == "rock" && computerSelection == "rock") || (mySelection == "paper" && computerSelection == "paper")
     || (mySelection == "scissor" && computerSelection == "scissor")){
         res = "T";
@@ -43,16 +43,16 @@ function playRound(playerSelection, computerSelection){
 
 function roundOutcome(res, mySelection, computerSelection){
     if (res == "T"){
-        console.log("Tie! " + capitalizeFirstLetter(mySelection) + " ties with " + capitalizeFirstLetter(computerSelection))
-        divRes.textContent = "Tie! " + capitalizeFirstLetter(mySelection) + " ties with " + capitalizeFirstLetter(computerSelection)
+        console.log("Tie! " + capitalizeFirstLetter(mySelection) + " ties with " + capitalizeFirstLetter(computerSelection));
+        divRes.textContent = "Tie! " + capitalizeFirstLetter(mySelection) + " ties with " + capitalizeFirstLetter(computerSelection);
     }
     else if (res == "W"){
-        console.log("You Win! " + capitalizeFirstLetter(mySelection) + " beats " + capitalizeFirstLetter(computerSelection))
-        divRes.textContent = "You Win! " + capitalizeFirstLetter(mySelection) + " beats " + capitalizeFirstLetter(computerSelection)
+        console.log("You Win! " + capitalizeFirstLetter(mySelection) + " beats " + capitalizeFirstLetter(computerSelection));
+        divRes.textContent = "You Win! " + capitalizeFirstLetter(mySelection) + " beats " + capitalizeFirstLetter(computerSelection);
     }
     else if (res == "L"){
-        console.log("You Lose! " + capitalizeFirstLetter(computerSelection) + " beats " + capitalizeFirstLetter(mySelection))
-        divRes.textContent = "You Lose! " + capitalizeFirstLetter(computerSelection) + " beats " + capitalizeFirstLetter(mySelection)
+        console.log("You Lose! " + capitalizeFirstLetter(computerSelection) + " beats " + capitalizeFirstLetter(mySelection));
+        divRes.textContent = "You Lose! " + capitalizeFirstLetter(computerSelection) + " beats " + capitalizeFirstLetter(mySelection);
     }
 }
 
@@ -60,21 +60,21 @@ function scoreboard(mySelection, compSelection, myScore, compScore){
     myScoreboard.textContent = myScore.toString();
     compScoreboard.textContent = compScore.toString();
     myPrompt.textContent = "Player: " + capitalizeFirstLetter(mySelection);
-    compPrompt.textContent = "Computer : " + capitalizeFirstLetter(compSelection);
+    compPrompt.textContent = "Computer: " + capitalizeFirstLetter(compSelection);
 }
 
 
 
 // User Interface
-const divRes = document.querySelector('.res')
-const rockBtn = document.querySelector('.rock')
-rockBtn.addEventListener('click', () => clickToPlay('rock'))
-const paperBtn = document.querySelector('.paper')
-paperBtn.addEventListener('click', () => clickToPlay('paper'))
-const scissorBtn = document.querySelector('.scissor')
-scissorBtn.addEventListener('click', () => clickToPlay('scissor'))
-const myScoreboard = document.querySelector('.myScore')
-const compScoreboard = document.querySelector('.compScore')
+const divRes = document.querySelector('.res');
+const rockBtn = document.querySelector('.rock');
+rockBtn.addEventListener('click', () => clickToPlay('rock'));
+const paperBtn = document.querySelector('.paper');
+paperBtn.addEventListener('click', () => clickToPlay('paper'));
+const scissorBtn = document.querySelector('.scissor');
+scissorBtn.addEventListener('click', () => clickToPlay('scissor'));
+const myScoreboard = document.querySelector('.myScore');
+const compScoreboard = document.querySelector('.compScore');
 const myPrompt = document.querySelector('.myPrompt');
 const compPrompt = document.querySelector('.compPrompt');
 
@@ -93,10 +93,10 @@ function clickToPlay(mySelection){
         else{
             divRes.textContent = "Good Game! You lost the game " + myScore.toString() + " - " + compScore.toString() + ". Click a button to play again!";
         }
-        resetGame()
-        return
+        resetGame();
+        return;
     }
-    const computerSelection = computerPlay()
+    const computerSelection = computerPlay();
     playRound(mySelection, computerSelection);
     
     
